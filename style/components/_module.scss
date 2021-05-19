@@ -1,0 +1,78 @@
+.module {
+  position: relative;
+  margin-bottom: 10px;
+
+  &__toggle {
+    position: absolute;
+    left: 15px;
+    top: 17px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    transition: all 0.5s ease-in-out;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      background-color: #d9d9d9;
+    }
+
+    &::after {
+      height: 100%;
+      width: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 1px;
+    }
+
+    &::before {
+      width: 100%;
+      height: 2px;
+      top: 50%;
+    }
+  }
+
+  &__number {
+    padding: 15px 50px;
+    background-color: $grey;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+
+    @media only screen and (min-width: $desktop-width) {
+      background-color: transparent;
+    }
+  }
+
+  &__list {
+    height: 0;
+    overflow: hidden;
+    padding-left: 20px;
+  }
+}
+
+.module.active {
+  .module__toggle {
+    transform: rotate(180deg);
+
+    &::before {
+      background-color: $white;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      background-color: transparent;
+      transition: background-color 0.25s ease-in-out 0.25s;
+    }
+  }
+
+  .module__number {
+    background-color: $main-red;
+    color: $white;
+  }
+
+  .module__list {
+    height: auto;
+  }
+}

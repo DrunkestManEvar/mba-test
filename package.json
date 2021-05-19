@@ -1,0 +1,14 @@
+{
+  "name": "mba",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass --watch sass/main.scss -o css/style.css"
+  },
+  "author": "Eugene Pudanov",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.0"
+  }
+}

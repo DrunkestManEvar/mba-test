@@ -1,0 +1,189 @@
+body {
+  font-family: 'StyreneAWeb', sans-serif;
+  line-height: 120%;
+}
+
+li::marker {
+  color: #ff3535;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'StyreneAWeb';
+  src: local("StyreneAWeb"), url("../fonts/StyreneAWeb-Regular.ttf") format("truetype"), url("../fonts/StyreneAWeb-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/StyreneAWeb-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'StyreneAWeb';
+  src: local("StyreneAWeb"), url("../fonts/StyreneAWeb-Light.ttf") format("truetype"), url("../fonts/StyreneAWeb-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/StyreneAWeb-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'StyreneAWeb';
+  src: local("StyreneAWeb"), url("../fonts/StyreneAWeb-Bold.ttf") format("truetype"), url("../fonts/StyreneAWeb-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/StyreneAWeb-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'StyreneAWeb';
+  src: local("StyreneAWeb"), url("../fonts/StyreneAWeb-Medium.ttf") format("truetype"), url("../fonts/StyreneAWeb-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/StyreneAWeb-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+.main-heading {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 120%;
+  margin-bottom: 35px;
+}
+
+@media only screen and (min-width: 1920px) {
+  .main-heading {
+    margin-bottom: 90px;
+  }
+}
+
+.subheading {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 120%;
+  margin-bottom: 25px;
+}
+
+@media only screen and (min-width: 1920px) {
+  .subheading {
+    font-size: 26px;
+  }
+}
+
+.list-heading {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 130%;
+}
+
+@media only screen and (min-width: 1920px) {
+  .list-heading {
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 120%;
+  }
+}
+
+.module {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.module__toggle {
+  position: absolute;
+  left: 15px;
+  top: 17px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.module__toggle::before, .module__toggle::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #d9d9d9;
+}
+
+.module__toggle::after {
+  height: 100%;
+  width: 2px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 1px;
+}
+
+.module__toggle::before {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+}
+
+.module__number {
+  padding: 15px 50px;
+  background-color: #f7f7f7;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+@media only screen and (min-width: 1920px) {
+  .module__number {
+    background-color: transparent;
+  }
+}
+
+.module__list {
+  height: 0;
+  overflow: hidden;
+  padding-left: 20px;
+}
+
+.module.active .module__toggle {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.module.active .module__toggle::before {
+  background-color: #fff;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.module.active .module__toggle::after {
+  background-color: transparent;
+  -webkit-transition: background-color 0.25s ease-in-out 0.25s;
+  transition: background-color 0.25s ease-in-out 0.25s;
+}
+
+.module.active .module__number {
+  background-color: #ff3535;
+  color: #fff;
+}
+
+.module.active .module__list {
+  height: auto;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 345px;
+}
+
+@media only screen and (min-width: 1920px) {
+  .container {
+    max-width: 1286px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
