@@ -1,6 +1,7 @@
 import { dataJSON, splitIntoSubArrays } from './utilities.js';
 
 const programmesContainer = document.querySelector('.programmes-container');
+const errorContainerBtn = document.querySelector('.error-container__button');
 const programmes = [];
 const modules = [];
 const API_URL =
@@ -59,7 +60,7 @@ class App {
         ${this.generateListItems(sub)}
       </ul>
     </div>
-      `
+      `;
       })
       .join('');
   };
@@ -68,6 +69,17 @@ class App {
     listItemsArray
       .map(item => `<li class="module__list-item">${item}</li>`)
       .join('');
+
+  displayErrorMessage = () => {
+    const loader = document.querySelector('.loader');
+    programmesContainer.removeChild(loader);
+    programmesContainer.classList.add('error');
+  };
+
+  removeError = () => {
+    this.error = null;
+    programmesContainer.classList.remove('error');
+  };
 
   handleModuleClick = e => {
     const clickedModule = e.target.closest('.module');
@@ -79,9 +91,10 @@ class App {
 
   init = async () => {
     await this.fetchData(API_URL);
+    errorContainerBtn.addEventListener('click', this.removeError);
 
-    if (this.error) return;
-
+    if (this.error) return this.displayErrorMessage();
+    console.log(errorContainerBtn);
     programmesContainer.addEventListener('click', this.handleModuleClick);
     this.displayProgrammes();
   };

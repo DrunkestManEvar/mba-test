@@ -1,0 +1,11 @@
+.error-container {
+  display: none;
+  background-color: $grey;
+
+  &__button {
+    background-color: $main-red;
+    min-width: 50px;
+    padding: 10px 15px;
+    color: $white;
+  }
+}

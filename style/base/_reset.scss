@@ -10,3 +10,15 @@ body {
   background-color: $white;
   box-sizing: border-box;
 }
+
+button {
+  background: transparent;
+  outline: none;
+  border: none;
+
+  &::focus,
+  &::active {
+    outline: none;
+    border: none;
+  }
+}

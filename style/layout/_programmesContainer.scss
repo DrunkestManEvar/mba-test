@@ -1,0 +1,15 @@
+.programmes-container.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100px;
+    padding: 15px 30px;
+    background-color: $grey;
+  }
+}
