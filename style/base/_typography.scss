@@ -52,25 +52,39 @@
   line-height: 120%;
   margin-bottom: 35px;
 
-  @media only screen and (min-width: $desktop-width) {
+  @media only screen and (min-width: 1316px) {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
     margin-bottom: 90px;
+  }
+}
+
+.large-heading {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 120%;
+  margin-bottom: 25px;
+
+  @media only screen and (min-width: $desktop-width) {
+    font-size: 36px;
   }
 }
 
 .subheading {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 22px;
-  line-height: 120%;
+  line-height: 130%;
   margin-bottom: 25px;
 
   @media only screen and (min-width: $desktop-width) {
     font-size: 26px;
+    margin-bottom: 85px;
   }
 }
 
 .list-heading {
-  font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 130%;

@@ -1,0 +1,20 @@
+.programme {
+  &:not(:last-child) {
+    margin-bottom: 25px;
+
+    @media only screen and (min-width: $desktop-width) {
+      margin-bottom: 70px;
+    }
+  }
+
+  @media only screen and (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    padding-left: 5px;
+
+    &__title {
+      flex: 1 0 100%;
+    }
+  }
+}

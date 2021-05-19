@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/main.css" />
-    <script defer src="app.js"></script>
+    <script type="module" defer src="app.js"></script>
     <title>MBA</title>
   </head>
   <body>
@@ -14,7 +14,8 @@
         <h1 class="main-heading">Специализированные дисциплины</h1>
       </header>
       <section class="programmes-container">
-        <article class="programme">
+        <div class="loader"></div>
+        <!-- <article class="programme">
           <h3 class="programme__title subheading">Антикризисное управление</h3>
           <div class="module">
             <div class="module__toggle"></div>
@@ -33,7 +34,7 @@
               </li>
             </ul>
           </div>
-          <div class="module active">
+          <div class="module">
             <div class="module__toggle"></div>
             <h2 class="module__number list-heading">2 модуль</h2>
             <ul class="module__list list">
@@ -48,41 +49,8 @@
               <li class="module__list-item">Антикризисный консалтинг</li>
             </ul>
           </div>
-        </article>
-        <article class="programme">
-          <h3 class="programme__title subheading">Управление малым бизнесом</h3>
-          <div class="module">
-            <div class="module__toggle"></div>
-            <h2 class="module__number list-heading">1 модуль</h2>
-            <ul class="module__list list">
-              <li class="module__list-item">Управление в сфере малого бизнеса
-              </li>
-              <li class="module__list-item">Управление start-up-проектами</li>
-              <li class="module__list-item">Предпринимательство и предпринимательские проекты
-              </li>
-              <li class="module__list-item">Анализ и моделирование бизнес-процессов
-              </li>
-              <li class="module__list-item">Оценка и управление стоимостью бизнеса
-              </li>
-            </ul>
-          </div>
-          <div class="module">
-            <div class="module__toggle"></div>
-            <h2 class="module__number list-heading">2 модуль</h2>
-            <ul class="module__list list">
-              <li class="module__list-item">Стратегии развития и управление ростом бизнеса
-              </li>
-              <li class="module__list-item">Стратегическое финансовое управление бизнесом на основе
-                ценностно-ориентированного подхода
-              </li>
-              <li class="module__list-item">Бизнес-процессы и оргструктура компании
-              </li>
-              <li class="module__list-item">Налоговый менеджмент компании</li>
-              <li class="module__list-item">Правовые основы предпринимательской деятельности
-              </li>
-            </ul>
-          </div>
-        </article>
+        </article> -->
+        
       </section>
       <section class="features-block-container">
         <article class="features-block red-block">
@@ -91,7 +59,7 @@
         </article>
         <article class="features-block dark-block">
           <h2 class="features-block__heading large-heading">Итоговая аттестация</h2>
-          <ul class="list">
+          <ul class="features-block__list list">
             <li>Бизнес-проектирование (подготовка итоговой аттестационной работы, консультирование по бизнес-проектированию)</li>
             <li>Защита итоговой аттестационной работы
             </li>

@@ -32,12 +32,15 @@
       height: 2px;
       top: 50%;
     }
+
+    @media only screen and (min-width: $desktop-width) {
+      display: none;
+    }
   }
 
   &__number {
     padding: 15px 50px;
     background-color: $grey;
-    cursor: pointer;
     transition: 0.5s ease-in-out;
 
     @media only screen and (min-width: $desktop-width) {
@@ -46,9 +49,48 @@
   }
 
   &__list {
+    padding-top: 0;
     height: 0;
     overflow: hidden;
-    padding-left: 20px;
+
+    li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media only screen and (min-width: $desktop-width) {
+    flex: 1 1 288px;
+    display: flex;
+    align-items: flex-start;
+
+    &:not(:last-child) {
+      margin-right: 45px;
+    }
+
+    &__number {
+      position: relative;
+      padding: 0;
+      margin-right: 80px;
+      flex-shrink: 0;
+
+      &:nth-child(2) {
+        margin-right: 95px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -30px;
+        width: 100%;
+        height: 2px;
+        background-color: $main-red;
+      }
+    }
+
+    &__list {
+      height: auto;
+    }
   }
 }
 
@@ -70,9 +112,15 @@
   .module__number {
     background-color: $main-red;
     color: $white;
+
+    @media only screen and (min-width: $desktop-width) {
+      background-color: transparent;
+      color: $black;
+    }
   }
 
   .module__list {
+    padding-top: 15px;
     height: auto;
   }
 }

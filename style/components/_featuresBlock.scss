@@ -1,0 +1,40 @@
+.features-block {
+  padding: 30px 15px 35px;
+  color: $white;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 130%;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+
+    @media only screen and (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    padding: 0 0 25px 22px;
+
+    @media only screen and (min-width: $desktop-width) {
+      padding-bottom: 0;
+    }
+
+    li:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  @media only screen and (min-width: $desktop-width) {
+    flex-basis: 50%;
+    padding: 55px 60px 55px;
+
+    &:nth-of-type(odd) {
+      margin-right: 30px;
+    }
+
+    p {
+      max-width: 410px;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.features-block-container {
+  margin: 45px 0;
+
+  @media only screen and (min-width: $desktop-width) {
+    display: flex;
+  }
+}
